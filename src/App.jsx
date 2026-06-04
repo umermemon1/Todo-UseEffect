@@ -1,4 +1,5 @@
 import "./App.css";
+import Navbar from "./components/Navbar.jsx";
 import React, { useState } from "react";
 
 const App = () => {
@@ -56,6 +57,7 @@ const App = () => {
 
   return (
     <div className="main">
+      <Navbar totalTodos={todos.length} editing={editId !== null} />
       <h1>Todo App Reactjs</h1>
 
       <form onSubmit={create_todo}>
